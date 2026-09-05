@@ -338,7 +338,8 @@ def process_shift_handoff(csv_file_path):
 # --- EXECUTION BLOCK ---
 if __name__ == "__main__":
     # Test file name
-    sample_csv = r"D:\Learnimg Python\Shift Change\cybersecurity_tickets_mock.csv"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    sample_csv = os.path.join(script_dir, "cybersecurity_tickets_mock.csv")
     
     # Process tickets
     summary_df = process_shift_handoff(sample_csv)
