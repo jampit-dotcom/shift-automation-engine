@@ -1,4 +1,7 @@
 SOC Shift Automation Engine
+
+![Shift Handoff Report Preview](report_preview.png)
+
 A Python-based automation utility designed to eliminate manual bottlenecks in SOC (Security Operations Center) shift handoffs. This tool ingests raw ticketing exports, processes critical security alerts, leverages AI for incident summarization, and generates a structured, professional HTML shift handoff report.
 
 Features
