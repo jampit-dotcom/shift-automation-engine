@@ -103,9 +103,12 @@ def generate_html_report(dataframe, output_filename="shift_handoff_report.html")
         template_content = f.read()
 
     # Safely inject variables via replacement to avoid CSS/Python brace conflicts
-    html_content = template_content.replace("{NOW}", now)
-    html_content = template_content.replace("{TOTAL_TICKETS}", str(total_tickets))
-    html_content = template_content.replace("{TICKET_CARDS_HTML}", ticket_cards_html)
+    html_content = (
+        template_content
+        .replace("{NOW}", now)
+        .replace("{TOTAL_TICKETS}", str(total_tickets))
+        .replace("{TICKET_CARDS_HTML}", ticket_cards_html)
+    )
     
     # Write HTML output to disk
     with open(output_filename, "w", encoding="utf-8") as f:

@@ -167,7 +167,7 @@
                 <span style="color: var(--text-secondary); font-size: 14px;">Automated Cyber Incident Operations Summary</span>
             </div>
             <div class="meta-info">
-                <div><strong>Generated:</strong> {NOW}</div>
+                <div><strong>Generated:</strong> 2026-10-04 15:15:57</div>
                 <div><strong>Classification:</strong> CTI Operational Internal</div>
             </div>
         </div>
@@ -175,7 +175,7 @@
         <div class="metrics-banner">
             <div class="metric">
                 <span class="metric-label">Active Handoff Tickets</span>
-                <span class="metric-value">{TOTAL_TICKETS}</span>
+                <span class="metric-value">4</span>
             </div>
             <div class="metric">
                 <span class="metric-label">AI Processing Status</span>
@@ -184,7 +184,71 @@
         </div>
 
         <div class="tickets-container">
-            {TICKET_CARDS_HTML}
+            
+        <div class="ticket-card">
+            <div class="ticket-header">
+                <span class="ticket-id">INC-3001</span>
+                <span class="ticket-title">Active Ransomware Staging on Finance File Server</span>
+                <span class="badge badge-open">OPEN</span>
+            </div>
+            <div class="summary-section">
+                <strong>🤖 AI Handoff Executive Summary:</strong>
+                <p>Mass file encryption activity was detected on the finance file server \\srv-fin-02\shares, triggered by a suspicious executable running from AppData. The host has been isolated, the active user session terminated, and forensics are currently underway.</p>
+            </div>
+            <details class="raw-details">
+                <summary>View Raw Incident Logs / Full Description</summary>
+                <p>EDR reported mass file encryption activity on \\srv-fin-02\shares. Suspicious executable running from AppData. Host isolated immediately; active user session terminated. Forensics ongoing.</p>
+            </details>
+        </div>
+        
+        <div class="ticket-card">
+            <div class="ticket-header">
+                <span class="ticket-id">INC-3002</span>
+                <span class="ticket-title">Brute Force Attack Against Domain Controller</span>
+                <span class="badge badge-open">OPEN</span>
+            </div>
+            <div class="summary-section">
+                <strong>🤖 AI Handoff Executive Summary:</strong>
+                <p>A brute force attack was detected against the domain controller, triggered by high-frequency Kerberos pre-authentication failures from IP 192.168.40.12, resulting in account lockouts for four service accounts. The source IP has been temporarily rate-limited; further investigation and monitoring of affected accounts are required.</p>
+            </div>
+            <details class="raw-details">
+                <summary>View Raw Incident Logs / Full Description</summary>
+                <p>SIEM triggered high-frequency Kerberos pre-auth failures from IP 192.168.40.12. Source IP temporarily rate-limited; account lockout threshold reached for 4 service accounts.</p>
+            </details>
+        </div>
+        
+        <div class="ticket-card">
+            <div class="ticket-header">
+                <span class="ticket-id">INC-3005</span>
+                <span class="ticket-title">Cobalt Strike Beacon Outbound C2 Connection</span>
+                <span class="badge badge-open">OPEN</span>
+            </div>
+            <div class="summary-section">
+                <strong>🤖 AI Handoff Executive Summary:</strong>
+                <p>EDR detected suspicious HTTPS beaconing to a known threat intelligence IOC (IP 185.220.101.5), prompting the isolation of the affected host through network containment policy. A memory dump has been captured for tier-3 analysis, and further investigation is required to assess the extent of the compromise.</p>
+            </div>
+            <details class="raw-details">
+                <summary>View Raw Incident Logs / Full Description</summary>
+                <p>EDR flagged suspicious HTTPS beaconing to known threat intel IOC (IP 185.220.101.5). Host isolated via network containment policy. Memory dump captured for tier-3 analysis.</p>
+            </details>
+        </div>
+        
+        <div class="ticket-card">
+            <div class="ticket-header">
+                <span class="ticket-id">INC-3006</span>
+                <span class="ticket-title">Suspicious PowerShell Execution by Local Service Account</span>
+                <span class="badge badge-open">OPEN</span>
+            </div>
+            <div class="summary-section">
+                <strong>🤖 AI Handoff Executive Summary:</strong>
+                <p>A local service account executed an obfuscated PowerShell command using Invoke-Expression, which was blocked by AMSI during execution. The investigation is ongoing to determine the script's origin and the parent process tree.</p>
+            </div>
+            <details class="raw-details">
+                <summary>View Raw Incident Logs / Full Description</summary>
+                <p>Local service account executed obfuscated PowerShell command string invoking Invoke-Expression. Investigating script origin and parent process tree; execution blocked by AMSI.</p>
+            </details>
+        </div>
+        
         </div>
     </div>
 </body>
